@@ -13,7 +13,7 @@ export default function HeroSection() {
             solutions. Adept in JavaScript and React, passionate about
             innovation and collaborative growth.
           </p>
-          <div className="[font-family:'Poppins-Bold',Helvetica] font-extrabold text-color-2 text-[77px] tracking-[0] leading-none">
+          <div className="[font-family:'Poppins-Bold',Helvetica] font-extrabold text-color-2 text-[77px] sm:text-[40px] tracking-[0] leading-none">
             I’M A WEB Developer
           </div>
           <p className=" [font-family:'Poppins-Medium',Helvetica] font-medium text-white text-[28px] tracking-[0] leading-[normal]">

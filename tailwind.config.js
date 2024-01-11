@@ -3,32 +3,25 @@ export default {
   content: ['./index.html', './src/**/*.{html,js,ts,jsx,tsx}'],
   theme: {
     screens: {
-      sm: '480px',
-      md: '768px',
-      lg: '976px',
-      xl: '1440px',
+      sm: { min: '300px', max: '767px' },
+      // => @media (min-width: 640px and max-width: 767px)
+
+      md: { min: '768px', max: '1023px' },
+      // => @media (min-width: 768px and max-width: 1023px)
+
+      lg: { min: '1024px', max: '1279px' },
+      // => @media (min-width: 1024px and max-width: 1279px)
+
+      xl: { min: '1280px', max: '1535px' },
+      // => @media (min-width: 1280px and max-width: 1535px)
+
+      '2xl': { min: '1536px', max: '1905px' },
+      // => @media (min-width: 1536px and max-width: 1905px)
+
+      '3xl': { min: '1906px' },
+      // => @media (min-width: 1905px)
     },
-    fontFamily: {
-      myName: ['Inter', 'sans-serif'],
-      sans: ['Graphik', 'sans-serif'],
-      serif: ['Merriweather', 'serif'],
-    },
-    extend: {
-      colors: {
-        'color-2': 'var(--color-2)',
-      },
-      backgroundImage: {
-        myImage: ['url("./src/assets/bg.jpeg")'],
-        'my-char': 'url("./src/assets/charector.png")',
-      },
-      spacing: {
-        128: '32rem',
-        144: '36rem',
-      },
-      borderRadius: {
-        '4xl': '2rem',
-      },
-    },
+    extend: {},
   },
   plugins: [],
 };
