@@ -1,18 +1,24 @@
 import linkedinIcon from '../assets/linkedin.svg';
 import { useState } from 'react';
 import instagram from '../assets/instagram.svg';
-import github from '../assets/github.svg';
+import github from '../assets/github-mark-white.svg';
 
 export default function Header() {
+  let menuItems = [
+    { name: 'Home', link: '/' },
+    { name: 'Projects', link: '/' },
+    { name: 'About', link: '/' },
+    { name: 'Contacts', link: '/' },
+  ];
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClick = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <header className='flex flex-row sm:pb-4 sm:flex-col py-10 sm:p-0 md:py-8 md:px-8 px-14 lg:px-10 '>
-      <div className='sm:flex sm:items-center sm:flex-row sm:justify-between lg:basis-2/5 sm:p-6 xl:basis-1/2 2xl:basis-1/2 3xl:basis-1/2 md:basis-2/5'>
-        <div className="ml-6 sm:text-[20px] [font-family:'Inter-Bold',Helvetica] font-bold text-white text-[24px] lg:text-[20px] md:text-[18px] tracking-[0] leading-[normal]">
+    <nav className='flex justify-between py-10 px-14 sm:flex-col sm:y-8'>
+      <div className='flex items-center justify-between m-4 sm:m-0 sm:mb-6'>
+        <div className="ml-4 sm:text-[20px] [font-family:'Inter-Bold',Helvetica] font-bold text-white text-[24px] lg:text-[20px] md:text-[18px] tracking-[0] leading-[normal]">
           Maison Cuz
         </div>
         <button
@@ -39,10 +45,15 @@ export default function Header() {
           ></span>
         </button>
       </div>
-      <div
+      {/* <ul
         className={`${
           isOpen ? 'sm:flex-col transition' : 'sm:hidden'
         } sm:w-5/6 sm:rounded-xl flex sm:py-4 sm:gap-4 md:basis-3/5 lg:basis-3/5 xl:basis-1/2 2xl:basis-1/2 3xl:basis-1/2 sm:mx-auto sm:bg-gray-600 sm:bg-opacity-30 3xl:pr-10 2xl:pr-10 xl:gap-1 lg:gap-1 place-items-center`}
+      > */}
+      <ul
+        className={`${
+          isOpen ? 'opacity-100 ' : 'sm:opacity-0 '
+        }  sm:absolute static m-4 mr-6 sm:mx-auto sm:mt-12 sm:left-0 sm:right-0 items-center md:flex lg:flex xl:flex 2xl:flex 3xl:flex gap-12  sm:w-3/4 sm:rounded-xl sm:py-4 sm:gap-4  sm:bg-gray-600 sm:bg-opacity-30 transition-all duration-500 ease-in`}
       >
         {/* <div
         className={`${
@@ -51,37 +62,38 @@ export default function Header() {
             : 'sm:hidden sm:scale-95 opacity-0'
         } transform transition-all duration-300 sm:w-5/6 sm:rounded-xl flex sm:py-4 sm:gap-4 md:basis-3/5 lg:basis-3/5 xl:basis-1/2 2xl:basis-1/2 3xl:basis-1/2 sm:mx-auto sm:bg-gray-600 sm:bg-opacity-30 3xl:pr-10 2xl:pr-10 xl:gap-1 lg:gap-1 place-items-center`}
       > */}
-        <div className="basis-1/6 relative text-center w-fit lg:mx-auto [font-family:'Poppins-Regular',Helvetica] font-normal text-color-2 lg:text-[16px] md:text-[16px]  text-[18px] tracking-[0] leading-[normal] hover:text-yellow-300 active:text-yellow-500 transition cursor-pointer">
+        {/* {menuItems.map(items => {
+          <li key={items.name} className="basis-1/6 relative text-center w-fit lg:mx-auto [font-family:'Poppins-Regular',Helvetica] font-normal text-color-2 lg:text-[16px] md:text-[16px] text-[18px] tracking-[0] leading-[normal] hover:text-yellow-300 active:text-yellow-500 transition cursor-pointer">
+            <a href={items.link}>{items.name}</a>
+          </li>;
+        })} */}
+        <li className="text-center my-4 duration-400 [font-family:'Poppins-Regular',Helvetica] font-normal lg:text-[16px] md:text-[16px] text-[18px] tracking-[0] leading-[normal] text-yellow-400 hover:text-yellow-100 cursor-pointer">
           Home
-        </div>
-        <div className="basis-1/6 relative text-center w-fit lg:mx-auto [font-family:'Poppins-Regular',Helvetica] font-normal text-color-2 lg:text-[16px] md:text-[16px] text-[18px] tracking-[0] leading-[normal] hover:text-yellow-300 active:text-yellow-500 transition cursor-pointer">
+        </li>
+        <li className="text-center my-4 duration-400 [font-family:'Poppins-Regular',Helvetica] font-normal lg:text-[16px] md:text-[16px] text-[18px] tracking-[0] leading-[normal] text-yellow-400 hover:text-yellow-100 cursor-pointer">
           Projects
-        </div>
-        <div className="basis-1/6 relative text-center w-fit lg:mx-auto [font-family:'Poppins-Regular',Helvetica] font-normal text-color-2 lg:text-[16px] md:text-[16px] text-[18px] tracking-[0] leading-[normal] hover:text-yellow-300 active:text-yellow-500 transition cursor-pointer">
+        </li>
+        <li className="text-center my-4 duration-400 [font-family:'Poppins-Regular',Helvetica] font-normal lg:text-[16px] md:text-[16px] text-[18px] tracking-[0] leading-[normal] text-yellow-400 hover:text-yellow-100 cursor-pointer">
           About
-        </div>
-        <div className="basis-1/6 relative text-center w-fit lg:mx-auto [font-family:'Poppins-Regular',Helvetica] font-normal text-color-2 lg:text-[16px] md:text-[14px] text-[18px] tracking-[0] leading-[normal] hover:text-yellow-300 active:text-yellow-500 transition cursor-pointer">
+        </li>
+        <li className="text-center my-4 duration-400 [font-family:'Poppins-Regular',Helvetica] font-normal lg:text-[16px] md:text-[14px] text-[18px] tracking-[0] leading-[normal] text-yellow-400 hover:text-yellow-100 cursor-pointer">
           Contacts
-        </div>
-        <div className='sm:gap-2 basis-2/6 justify-center flex flex-row-reverse lg:gap-2 xl:mx-1 xl:gap-1 md:gap-3 2xl:gap-4 3xl:gap-4  lg:mr-4 items-center'>
+        </li>
+        <ul className='gap-5 flex justify-center items-center sm:mt-6'>
           <img
-            className='w-6 h-6 lg:w-5 lg:h-5 md:w-5 md:h-5 xl:m-1 left-[1283px]'
-            alt='Akar icons linkedin'
+            className='w-6 h-6 cursor-pointer'
+            alt='linkedin'
             src={linkedinIcon}
           />
+          <img className='w-6 h-6 cursor-pointer' alt='github' src={github} />
           <img
-            className='w-7 h-7 lg:w-6 lg:h-6 md:w-6 md:h-6 xl:m-1 left-[1234px]'
-            alt='Prime github'
-            src={github}
-          />
-          <img
-            className='w-6 h-6 lg:w-5 lg:h-5 md:w-5 md:h-5 xl:m-1 left-[1191px]'
+            className='w-6 h-6 cursor-pointer'
             alt='Instagram'
             src={instagram}
           />
-        </div>
-      </div>
-    </header>
+        </ul>
+      </ul>
+    </nav>
   );
 }
 

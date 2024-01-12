@@ -8,7 +8,7 @@ export default function HeroSection() {
           <div className=" underline underline-offset-[8px] [font-family:'Poppins-ExtraBold',Helvetica] font-bold text-white text-[24px]">
             View My Projects
           </div>
-          <p className="mb-4 [font-family:'Poppins-Regular',Helvetica] font-normal text-[#f8f7f980] text-[24px] tracking-[0] leading-snug">
+          <p className="mb-4 [font-family:'Poppins-Regular',Helvetica] font-normal text-[#f8f7f980] text-[24px] sm:text-[14px] tracking-[0] leading-snug">
             Skilled React Developer, focused on user-centric, responsive web
             solutions. Adept in JavaScript and React, passionate about
             innovation and collaborative growth.
