@@ -5,8 +5,8 @@ import HeroSection from './components/HeroSection';
 function App() {
   return (
     <>
-      <div className='bg-black 3xl:w-2/3 2xl:w-4/5  sm:w-full mx-auto'>
-        <div className='bg-[url(./assets/charrrr.png)] bg-cover'>
+      <div className='bg-black w-2/3  sm:w-full md:w-full lg:w-4/5 mx-auto'>
+        <div className='bg-[url(./assets/charrrr.png)] bg-cover sm:h-screen'>
           <Header />
           <HeroSection />
         </div>
