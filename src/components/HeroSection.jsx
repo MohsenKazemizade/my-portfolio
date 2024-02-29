@@ -23,8 +23,8 @@ export default function HeroSection() {
           <h1 className="[font-family:'Poppins-Bold',Helvetica] font-extrabold text-color-2 text-4xl sm:text-2xl 2xl:text-6xl 3xl:text-7xl tracking-[0] leading-none">
             I’M A WEB Developer
           </h1>
-          <p className="[font-family:'Poppins-Medium',Helvetica] font-medium text-white text-base 3xl:text-3xl 2xl:text-xl xl:text-xl lg:text-lg tracking-[0] leading-[normal]">
-            Hi , my name is Mohsen,
+          <p className="[font-family:'Poppins-Medium',Helvetica] animate-typing overflow-hidden whitespace-nowrap font-medium text-white text-base 3xl:text-3xl 2xl:text-xl xl:text-xl lg:text-lg tracking-[0] leading-[normal]">
+            Hi , my name is Mohsen
           </p>
         </div>
       </div>
