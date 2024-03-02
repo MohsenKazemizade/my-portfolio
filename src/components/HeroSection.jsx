@@ -12,8 +12,8 @@ export default function HeroSection() {
           />
         </div>
         <div className='basis-2/5 lg:basis-3/7 flex flex-col-reverse gap-4 pl-8 pb-32 lg:pb-26 md:pb-24 sm:py-auto sm:col-span-2'>
-          <p className="underline underline-offset-[8px] [font-family:'Poppins-ExtraBold',Helvetica] font-bold text-white text-base xl:text-lg 2xl:text-xl 3xl:text-2xl">
-            View My Projects
+          <p className="cursor-pointer underline underline-offset-[8px] [font-family:'Poppins-ExtraBold',Helvetica] font-bold text-white text-base xl:text-lg 2xl:text-xl 3xl:text-2xl">
+            View My CV
           </p>
           <p className="mb-4 [font-family:'Poppins-Regular',Helvetica] font-normal text-[#f8f7f980] text-sm xl:text-base 2xl:text-xl 3xl:text-2xl tracking-[0] leading-snug">
             Skilled React Developer, focused on user-centric, responsive web
