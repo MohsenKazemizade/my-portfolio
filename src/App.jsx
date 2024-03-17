@@ -1,26 +1,23 @@
 import './App.css';
-import Header from './components/Header';
+import NavBar from './components/NavBar';
 import { Routes, Route, useLocation } from 'react-router-dom';
-import Home from './pages/Home';
 import Projects from './pages/Projects';
-import MyServices from './pages/MyServices';
-import Contacts from './pages/Contacts';
-
+import Services from './pages/Services';
+import Contact from './pages/Contact';
+import Home from './pages/Home';
 function App() {
   const location = useLocation();
   return (
     <>
-      <div className='bg-black w-2/3  sm:w-full md:w-full lg:w-4/5 mx-auto'>
-        <div className='bg-[url(./assets/charrrr.png)] bg-cover sm:h-screen'>
-          <Header />
+      <div className='bg-black w-2/3 sm:w-full md:w-full lg:w-4/5 mx-auto rounded-lg'>
+        <div className='bg-[url(./assets/charrrr.png)] bg-cover sm:h-screen rounded-sm'>
+          <NavBar />
           <Routes location={location} key={location.pathname}>
             <Route index element={<Home />} />
             <Route path='/projects' element={<Projects />} />
-            <Route path='/myservices' element={<MyServices />} />
-            <Route path='/myservices' element={<MyServices />} />
-            <Route path='/contactme' element={<Contacts />} />
+            <Route path='/contact' element={<Contact />} />
+            <Route path='/services' element={<Services />} />
           </Routes>
-          <Home />
         </div>
       </div>
     </>

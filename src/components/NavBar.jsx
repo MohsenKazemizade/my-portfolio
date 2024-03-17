@@ -1,12 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-export default function Header() {
-  let menuItems = [
-    { name: 'Home', link: '/' },
-    { name: 'Projects', link: '/' },
-    { name: 'About', link: '/' },
-    { name: 'Contacts', link: '/' },
-  ];
+export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClick = () => {
@@ -15,8 +9,13 @@ export default function Header() {
   return (
     <nav className='flex justify-between py-10 px-14 lg:px-10 sm:flex-col sm:y-8'>
       <div className='flex items-center justify-between m-4 sm:m-0 sm:mb-6'>
-        <div className="ml-4 sm:text-[20px] [font-family:'Inter-Bold',Helvetica] font-bold text-white text-2xl xl:text-lg lg:text-base md:text-base tracking-[0] leading-[normal]">
-          Mohsen Kazemi
+        <div className='ml-4 tracking-[0] leading-[normal]'>
+          <Link
+            to='/'
+            className="sm:text-[20px] [font-family:'Inter-Bold',Helvetica] font-bold text-white hover:text-white text-2xl xl:text-lg lg:text-base md:text-base"
+          >
+            Mohsen Kazemi
+          </Link>
         </div>
         <button
           onClick={handleClick}
@@ -47,20 +46,34 @@ export default function Header() {
           isOpen ? 'opacity-100 ' : 'sm:opacity-0 '
         }  sm:absolute static m-4 lg:m-3 2xl:mr-6 3xl:mr-6 sm:mx-auto sm:mt-12 sm:left-0 sm:right-0 items-center md:flex lg:flex xl:flex 2xl:flex 3xl:flex gap-10 sm:w-3/4 sm:rounded-xl sm:py-4 sm:gap-4 md:gap-5 lg:gap-6 xl:gap-8  sm:bg-gray-600 sm:bg-opacity-95 transition-all duration-500 ease-in`}
       >
-        <li>
-          <Link className="text-center my-4 duration-400 [font-family:'Poppins-Regular',Helvetica] font-normal text-base 2xl:text-lg 3xl:text-lg tracking-[0] leading-[normal] text-yellow-400 hover:text-yellow-100 cursor-pointer">
+        <li className="text-center my-4 duration-400 [font-family:'Poppins-Regular',Helvetica] font-normal text-base 2xl:text-lg 3xl:text-lg tracking-[0] leading-[normal]   cursor-pointer">
+          <Link to='/' className='text-yellow-400 hover:text-yellow-100'>
             Home
           </Link>
         </li>
         <li className="text-center my-4 duration-400 [font-family:'Poppins-Regular',Helvetica] font-normal text-base 2xl:text-lg 3xl:text-lg tracking-[0] leading-[normal] text-yellow-400 hover:text-yellow-100 cursor-pointer">
-          Projects
+          <Link
+            to='/projects'
+            className='text-yellow-400 hover:text-yellow-100'
+          >
+            Projects
+          </Link>
         </li>
-        <li className="text-center my-4 duration-400 [font-family:'Poppins-Regular',Helvetica] font-normal text-base 2xl:text-lg 3xl:text-lg tracking-[0] leading-[normal] text-yellow-400 hover:text-yellow-100 cursor-pointer">
-          My Services
+
+        <li className="text-center my-4 duration-400 [font-family:'Poppins-Regular',Helvetica] font-normal text-base 2xl:text-lg 3xl:text-lg tracking-[0] leading-[normal]   cursor-pointer">
+          <Link
+            to='/services'
+            className='text-yellow-400 hover:text-yellow-100'
+          >
+            Services
+          </Link>
         </li>
-        <li className="text-center my-4 duration-400 [font-family:'Poppins-Regular',Helvetica] font-normal text-base 2xl:text-lg 3xl:text-lg tracking-[0] leading-[normal] text-yellow-400 hover:text-yellow-100 cursor-pointer">
-          Contacts
+        <li className="text-center my-4 duration-400 [font-family:'Poppins-Regular',Helvetica] font-normal text-base 2xl:text-lg 3xl:text-lg tracking-[0] leading-[normal]   cursor-pointer">
+          <Link to='/contact' className='text-yellow-400 hover:text-yellow-100'>
+            Contact
+          </Link>
         </li>
+
         <ul className='gap-5 flex justify-center items-center sm:mt-6'>
           <svg
             width='24px'
