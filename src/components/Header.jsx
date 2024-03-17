@@ -1,8 +1,5 @@
-import linkedinIcon from '../assets/linkedin.svg';
 import { useState } from 'react';
-import instagram from '../assets/instagram.svg';
-import github from '../assets/github-mark-white.svg';
-
+import { Link } from 'react-router-dom';
 export default function Header() {
   let menuItems = [
     { name: 'Home', link: '/' },
@@ -50,8 +47,10 @@ export default function Header() {
           isOpen ? 'opacity-100 ' : 'sm:opacity-0 '
         }  sm:absolute static m-4 lg:m-3 2xl:mr-6 3xl:mr-6 sm:mx-auto sm:mt-12 sm:left-0 sm:right-0 items-center md:flex lg:flex xl:flex 2xl:flex 3xl:flex gap-10 sm:w-3/4 sm:rounded-xl sm:py-4 sm:gap-4 md:gap-5 lg:gap-6 xl:gap-8  sm:bg-gray-600 sm:bg-opacity-95 transition-all duration-500 ease-in`}
       >
-        <li className="text-center my-4 duration-400 [font-family:'Poppins-Regular',Helvetica] font-normal text-base 2xl:text-lg 3xl:text-lg tracking-[0] leading-[normal] text-yellow-400 hover:text-yellow-100 cursor-pointer">
-          Home
+        <li>
+          <Link className="text-center my-4 duration-400 [font-family:'Poppins-Regular',Helvetica] font-normal text-base 2xl:text-lg 3xl:text-lg tracking-[0] leading-[normal] text-yellow-400 hover:text-yellow-100 cursor-pointer">
+            Home
+          </Link>
         </li>
         <li className="text-center my-4 duration-400 [font-family:'Poppins-Regular',Helvetica] font-normal text-base 2xl:text-lg 3xl:text-lg tracking-[0] leading-[normal] text-yellow-400 hover:text-yellow-100 cursor-pointer">
           Projects
