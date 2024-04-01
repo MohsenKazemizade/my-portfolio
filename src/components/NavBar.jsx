@@ -110,9 +110,6 @@ export default function NavBar() {
             initial='close'
             animate='open'
             exit='close'
-            transition={{
-              type: 'tween',
-            }}
             className='fixed inset-0 bg-stone-900 p-6 space-y-10 flex flex-col justify-center items-center'
           >
             <motion.div

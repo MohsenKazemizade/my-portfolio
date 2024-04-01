@@ -1,4 +1,3 @@
-import NavBar from './components/NavBar';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Projects from './pages/Projects';
 import Services from './pages/Services';
@@ -10,7 +9,6 @@ function App() {
   return (
     <div className='bg-black bg-[url(./assets/charrrr.png)] bg-cover h-screen w-screen'>
       <AnimatePresence mode='wait' initial={false}>
-        <NavBar />
         <Routes location={location} key={location.key}>
           <Route exact path='/' element={<Home />} />
           <Route path='/projects' element={<Projects />} />
