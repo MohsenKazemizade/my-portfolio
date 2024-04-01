@@ -3,10 +3,11 @@ export default {
   content: ['./index.html', './src/**/*.{html,js,ts,jsx,tsx}'],
   theme: {
     screens: {
-      sm: { min: '300px', max: '767px' },
+      notSm: { min: '760px' },
+      sm: { min: '300px', max: '760px' },
       // => @media (min-width: 640px and max-width: 767px)
 
-      md: { min: '767px', max: '1023px' },
+      md: { min: '760px', max: '1023px' },
       // => @media (min-width: 768px and max-width: 1023px)
 
       lg: { min: '1023px', max: '1279px' },
