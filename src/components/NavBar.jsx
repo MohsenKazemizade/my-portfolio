@@ -8,12 +8,11 @@ export default function NavBar() {
   const [mobileNav, toggleMobileNav] = useCycle(false, true);
 
   return (
-    <nav className=' top-0 h-16'>
-      <div className='flex items-center justify-between w-full h-full px-4 md:px-6 lg:px-6'>
+    <nav className=' top-0 h-16 xl:h-20 2xl:h-24 3xl:h-28'>
+      <div className='flex items-center justify-between w-full h-full px-4 notSm:px-6 xl:px-8 2xl:px-10 3xl:px-12'>
         <Link
           to='/'
-          className='text-md
-           font-bold text-gray-100 hover:text-yellow-500 ml-2 md:text-lg notSm:ml-0 '
+          className='text-md font-bold text-gray-100 hover:text-yellow-500 ml-2 notSm:ml-0 notSm:text-xl xl:text-xl 2xl:text-2xl 3xl:text-3xl'
         >
           Mohsen Kazemi
         </Link>
@@ -46,9 +45,9 @@ export default function NavBar() {
             ></motion.span>
           </motion.button>
         </div>
-        <div className='sm:hidden flex justify-center items-center gap-x-6'>
-          <ul className='flex gap-x-6'>
-            <li className='flex text-lg font-bold'>
+        <div className='sm:hidden flex justify-center items-center mr-2 lg:mr-4 2xl:mr-6 3xl:mr-6'>
+          <ul className='flex gap-x-6 text-lg lg:gap-x-8 xl:gap-x-10 font-semibold xl:text-xl 2xl:text-2xl 2xl:gap-x-12 3xl:gap-x-16 3xl:text-3xl'>
+            <li className='flex'>
               <Link
                 to='/'
                 className='text-yellow-500 active:text-yellow-200 mx-auto'
@@ -56,7 +55,7 @@ export default function NavBar() {
                 Home
               </Link>
             </li>
-            <li className='flex text-lg font-bold '>
+            <li className='flex'>
               <Link
                 className='text-yellow-500 active:text-yellow-200'
                 to='/projects'
@@ -64,7 +63,7 @@ export default function NavBar() {
                 Projects
               </Link>
             </li>
-            <li className='flex text-lg font-bold '>
+            <li className='flex'>
               <Link
                 className='text-yellow-500 active:text-yellow-200'
                 to='/services'
@@ -72,7 +71,7 @@ export default function NavBar() {
                 Services
               </Link>
             </li>
-            <li className='flex text-lg font-bold '>
+            <li className='flex'>
               <Link
                 className='text-yellow-500 active:text-yellow-200'
                 to='/contact'

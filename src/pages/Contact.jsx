@@ -1,9 +1,6 @@
-import NavBar from '../components/NavBar';
-
 const Contact = () => {
   return (
     <>
-      <NavBar />
       <ul className='gap-5 flex justify-center items-center sm:mt-6'>
         <svg
           width='24px'
