@@ -1,8 +1,9 @@
+import SliderProjects from '../components/SliderProjects';
 const Projects = () => {
   return (
-    <>
-      <div className=''>Projects</div>
-    </>
+    <div className='notSm:h-5/6 notSm:content-center'>
+      <SliderProjects />
+    </div>
   );
 };
 

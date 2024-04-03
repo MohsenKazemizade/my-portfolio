@@ -1,12 +1,10 @@
-import React from 'react';
-
 const SliderProjects = () => {
   return (
     <div className='flex items-end justify-center'>
       <div className='flex flex-col gap-2 h-4/6'>
         <input type='radio' name='slide' id='c1' hidden />
         <label
-          for='c1'
+          htmlFor='c1'
           className='bg-Portfolio w-[421px] h-[60px] rounded-3xl bg-cover cursor-pointer overflow-hidden mx-[10px] flex items-end shadow-card transition-all duration-600 ease-[cubic-bezier(0.28,-0.03,0,0.99)]'
         >
           <div className='flex flex-nowrap items-center pb-2.5'>
@@ -30,7 +28,7 @@ const SliderProjects = () => {
         </label>
         <input type='radio' name='slide' id='c2' hidden />
         <label
-          for='c2'
+          htmlFor='c2'
           className='bg-animatedCV w-[421px] h-[60px] rounded-3xl bg-cover cursor-pointer overflow-hidden mx-[10px] flex items-end shadow-card transition-all duration-600 ease-[cubic-bezier(0.28,-0.03,0,0.99)]'
         >
           <div className='flex flex-nowrap items-center pb-2.5'>
@@ -54,7 +52,7 @@ const SliderProjects = () => {
         </label>
         <input type='radio' name='slide' id='c3' hidden />
         <label
-          for='c3'
+          htmlFor='c3'
           className='bg-project4 w-[421px] h-[60px] rounded-3xl bg-cover cursor-pointer overflow-hidden mx-[10px] flex items-end shadow-card transition-all duration-600 ease-[cubic-bezier(0.28,-0.03,0,0.99)]'
         >
           <div className='flex flex-nowrap items-center pb-2.5'>
@@ -78,7 +76,7 @@ const SliderProjects = () => {
         </label>
         <input type='radio' name='slide' id='c4' hidden />
         <label
-          for='c4'
+          htmlFor='c4'
           className='bg-project4 w-[421px] h-[60px] rounded-3xl bg-cover cursor-pointer overflow-hidden mx-[10px] flex items-end shadow-card transition-all duration-600 ease-[cubic-bezier(0.28,-0.03,0,0.99)]'
         >
           <div className='flex flex-nowrap items-center pb-2.5'>
@@ -103,7 +101,7 @@ const SliderProjects = () => {
         {/* ///////// */}
         {/* <input type='radio' name='slide' id='c5' hidden />
         <label
-          for='c5'
+          htmlFor='c5'
           className='bg-project1 w-[421px] h-[60px] rounded-3xl bg-cover cursor-pointer overflow-hidden mx-[10px] flex items-end shadow-card transition-all duration-600 ease-[cubic-bezier(0.28,-0.03,0,0.99)]'
         >
           <div className='flex flex-nowrap items-center pb-2.5'>
@@ -127,7 +125,7 @@ const SliderProjects = () => {
         </label>
         <input type='radio' name='slide' id='c6' hidden />
         <label
-          for='c6'
+          htmlFor='c6'
           className='bg-project1 w-[421px] h-[60px] rounded-3xl bg-cover cursor-pointer overflow-hidden mx-[10px] flex items-end shadow-card transition-all duration-600 ease-[cubic-bezier(0.28,-0.03,0,0.99)]'
         >
           <div className='flex flex-nowrap items-center pb-2.5'>
