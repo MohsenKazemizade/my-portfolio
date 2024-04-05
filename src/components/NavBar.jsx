@@ -8,7 +8,7 @@ export default function NavBar() {
   const [mobileNav, toggleMobileNav] = useCycle(false, true);
 
   return (
-    <nav className=' top-0 h-16 xl:h-20 2xl:h-24 3xl:h-28'>
+    <nav className=' top-0 h-16 xl:h-20 2xl:h-24 3xl:h-28 z-10'>
       <div className='flex items-center justify-between w-full h-full px-4 notSm:px-6 xl:px-8 2xl:px-10 3xl:px-12'>
         <Link
           to='/'
@@ -16,7 +16,7 @@ export default function NavBar() {
         >
           Mohsen Kazemi
         </Link>
-        <div className='relative z-10'>
+        <div className='relative z-20'>
           <motion.button
             animate={mobileNav ? 'open' : 'close'}
             onClick={() => toggleMobileNav()}
@@ -82,7 +82,7 @@ export default function NavBar() {
           </ul>
         </div>
       </div>
-      <AnimatePresence>
+      <AnimatePresence mode='wait'>
         {mobileNav && (
           <motion.div
             key='navKey'
@@ -109,7 +109,7 @@ export default function NavBar() {
             initial='close'
             animate='open'
             exit='close'
-            className='fixed inset-0 bg-stone-900 p-6 space-y-10 flex flex-col justify-center items-center'
+            className='fixed inset-0 bg-stone-900 p-6 space-y-10 flex flex-col justify-center items-center z-10'
           >
             <motion.div
               key='menuItems'

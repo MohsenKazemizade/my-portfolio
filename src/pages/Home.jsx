@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const Home = () => {
   return (
     <div className='notSm:h-5/6 notSm:content-center'>
-      <div className='flex flex-col-reverse gap-10 mt-8 notSm:grid notSm:grid-cols-2 notSm:grid-rows-2 notSm:gap-0 notSm:my-auto '>
+      <div className='flex flex-col-reverse gap-10 mt-8 notSm:grid notSm:grid-cols-2 notSm:grid-rows-2 notSm:gap-0'>
         <div className='flex flex-col justify-center gap-3 px-6 notSm:row-span-2 notSm:ml-6 xl:ml-12 2xl:ml-14 3xl:ml-16'>
           <motion.p
             initial={{ x: 2000, opacity: 0 }}
@@ -12,16 +12,16 @@ const Home = () => {
             transition={{
               type: 'spring',
               bounce: 0,
+              delay: 0.7,
               duration: 0.8,
-              delay: 0.2,
             }}
             exit={{
               x: -2000,
               opacity: 0,
               transition: {
                 type: 'spring',
-                delay: 0.2,
                 bounce: 0,
+                delay: 0.7,
                 duration: 0.8,
               },
             }}
@@ -35,8 +35,8 @@ const Home = () => {
             transition={{
               type: 'spring',
               bounce: 0,
+              delay: 0.8,
               duration: 0.8,
-              delay: 0.3,
             }}
             exit={{
               x: -2000,
@@ -44,7 +44,7 @@ const Home = () => {
               transition: {
                 type: 'spring',
                 bounce: 0,
-                delay: 0.3,
+                delay: 0.8,
                 duration: 0.8,
               },
             }}
@@ -58,8 +58,8 @@ const Home = () => {
             transition={{
               type: 'spring',
               bounce: 0,
+              delay: 0.9,
               duration: 0.8,
-              delay: 0.4,
             }}
             exit={{
               x: -2000,
@@ -67,7 +67,7 @@ const Home = () => {
               transition: {
                 type: 'spring',
                 bounce: 0,
-                delay: 0.4,
+                delay: 0.9,
                 duration: 0.8,
               },
             }}
@@ -83,8 +83,8 @@ const Home = () => {
             transition={{
               type: 'spring',
               bounce: 0,
+              delay: 1,
               duration: 0.8,
-              delay: 0.5,
             }}
             exit={{
               x: -2000,
@@ -92,7 +92,7 @@ const Home = () => {
               transition: {
                 type: 'spring',
                 bounce: 0,
-                delay: 0.5,
+                delay: 1,
                 duration: 0.8,
               },
             }}
@@ -107,8 +107,8 @@ const Home = () => {
           transition={{
             type: 'spring',
             bounce: 0,
+            delay: 0.6,
             duration: 0.8,
-            delay: 0.1,
           }}
           exit={{
             x: -2000,
@@ -116,7 +116,7 @@ const Home = () => {
             transition: {
               type: 'spring',
               bounce: 0,
-              delay: 0.1,
+              delay: 0.6,
               duration: 0.8,
             },
           }}
